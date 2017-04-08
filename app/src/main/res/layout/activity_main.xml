@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.softpo.day25pullsliding.MainActivity">
+
+    <!--自定义的控件
+    ImageView Button TextView ListView都有自己的属性 android：xxx
+    PullToRefreshListView 自己的属性 不能调用android：xxx
+    自定义的属性需要导入命名空间
+    -->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pullLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrHeaderTextColor="#f00"
+        ptr:ptrMode="pullDownFromTop"
+        ptr:ptrDrawable="@drawable/loading"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrShowIndicator="true"
+        ptr:ptrHeaderBackground="#0f0"
+        ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>
